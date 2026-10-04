@@ -1,0 +1,23 @@
+{
+  "skill_name": "crosspollinate",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Our AWS Lambda functions (Node 20, ~400 MB bundles) take 2-4 s on cold start, and keeping provisioned concurrency on all of them costs too much. Traffic is bursty and hard to predict. Who else has solved something like this? I want ideas from outside cloud computing.",
+      "expected_output": "Shows the abstracted problem, a contradiction (warm capacity is fast but expensive; scaling to zero is cheap but slow), and 4-6 fields covering biology, physical engineering and a human system, with no cloud or serverless fields. Writes crosspollinate-report.md to the cwd (about 500-700 words) with up to ~8 ranked ideas, each scored on fit, novelty and credibility and each with a source URL, plus a Try first section. The footer appears only if Semantic Scholar data or a quoted Wikipedia sentence is used.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "I run operations at a 300-bed hospital. ER patients wait a median of 4 hours to be seen and some leave without being treated. We can't add staff or beds this year. How would other industries or nature handle this kind of queue? Give me ideas I haven't heard from healthcare consultants.",
+      "expected_output": "Abstracts the problem to something like serving variable-urgency arrivals with fixed capacity, and names a contradiction such as fast triage vs. accurate prioritisation. Picks 4-6 fields that leave out healthcare and its close neighbours and include at least one from biology, one from physical engineering and one from a human system. Writes crosspollinate-report.md to the cwd (about one page) with ranked, sourced ideas, scores, no more than 3 ideas from any single field, and a Try first experiment that can be done without new staff or beds.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "my restaurant kitchen throws out about 15% of the food we buy, mostly prepped veg and proteins that expire before they're used. we do 120-200 covers a night and it varies a lot. im stuck, any fresh angles?",
+      "expected_output": "Turns the problem into an abstract pattern (perishable stock against uncertain demand) with a contradiction (prepping ahead keeps service fast but wastes food; prepping to order cuts waste but slows service). Picks 4-6 distant fields that leave out restaurants and food service and include biology, physical engineering and a human system. Writes crosspollinate-report.md to the cwd (about one page) with up to ~8 ranked ideas that each have a checked source URL and a mapping to a kitchen, and a cheap Try first experiment.",
+      "files": []
+    }
+  ]
+}
