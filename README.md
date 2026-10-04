@@ -22,20 +22,12 @@ You can also just ask "who else has solved something like this?" The skill asks 
 
 ## Sources
 
-None of these need an API key. Each agent keeps its result counts small and skips any source that errors or rate-limits.
+- **papers:** arXiv, Semantic Scholar, Crossref, Europe PMC
+- **code:** GitHub repo search
+- **discussion:** Hacker News, Lobsters
+- **fields:** Wikipedia
 
-| Agent | Source | Rate limit (no key) |
-|---|---|---|
-| papers | arXiv API | 1 req / 3 s |
-| papers | Semantic Scholar | Pool of ~5,000 req / 5 min shared by all anonymous users, so expect 429s. Skipped after one retry on a 429 |
-| papers | Crossref | ~50 req/s if you send a mailto (polite pool) |
-| papers | Europe PMC | No published limit; stay around 10 req/s |
-| code | GitHub repo search | 10 search req/min and 60 req/hr per IP |
-| discussion | HN Algolia | ~10,000 req/hr per IP |
-| discussion | Lobsters tag feed (`/t/<tag>.json`), optional | No stated limit; stay around 1 req/s |
-| fields | Wikipedia search + summaries | No hard limit for serial requests |
-
-The code agent uses GitHub repo search only, because code search rejects requests that have no token. Rate limits are approximate and may change.
+No API keys or sign-ups needed. Busy or rate-limited sources are skipped automatically.
 
 ## Example
 
